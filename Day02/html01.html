@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 계속</title>
+    <style>
+        /* 클래스 선택자 */
+        .select {
+            color: red;
+        }
+        .item {
+            color: blue;
+        }
+        .focus {
+            background-color: blanchedalmond;
+        }
+        /* 태그선택자 중 속성 선택자 */
+        input[type="text"] {
+            background-color: antiquewhite;
+        }
+
+        input[type="password"] {
+            background-color: aquamarine;
+        }
+        /* 후손 선택자 */
+        #section h2 {
+            color: brown;
+        }
+        /* 자손 선택자*/
+        #section > p {
+            color: blue;
+        }
+        /* 반응, 상태 선택자 */
+        input:focus {
+            background-color: blueviolet;
+        }
+        .title:hover {color: blue;}
+        .title.active {color:brown;}
+        ul {
+            overflow: hidden;
+        }
+        #menu li {
+            list-style: none;
+            float:left; padding: 10px 5px 15px 20px; 
+            /* 위 오 아 왼 (윗쪽부터 시계방향으로)*/
+            /* 참고
+            WPF : L, T, R, B
+            CSS : T, R, B, L
+            */
+        }
+        /* 구조선택자 */
+        #menu li:nth-child(2n) {
+            background-color: #ff0003
+        }
+        #menu li:nth-child(2n+1) {
+            background-color: #800000
+        }
+        #menu li:first-child {
+            border-radius: 10px 0 0 10px;
+        }
+        #menu li:last-child {
+        border-radius: 0 10px 10px 0;
+        }
+        /* p:nth-child(1)
+           단순히 p 태그 중에서 첫번째가 아니라 
+           부모요소의 자식 중 첫 번째 선택자가 p 인 경우 해당된다.
+        */
+        /* 1.0em = 100% */
+        p:nth-child(1) {font-size: 1.0em;}
+        p:nth-child(2) {font-size: 2.0em;}
+        p:nth-child(3) {font-size: 3.0em;}
+        p:nth-child(4) {font-size: 4.0em;}
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>애플</li>
+        <li class="item focus">바나나</li>
+        <li class="select">오렌지</li>
+        <li class="select">망고</li>
+    </ul><br>
+    <form>
+        <input type="text"><br>
+        <input type="password"><br>
+        <input type="submit"><br>
+
+    </form>
+    <div id="section">
+        <h2 class="title">Lorem ipsum</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <ul id="menu">
+        <li >네이버</li>
+        <li >카카오</li>
+        <li >구글</li>
+        <li >토스</li>
+    </ul>
+    <div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+    </div>
+
+</body>
+</html>
