@@ -335,6 +335,12 @@
     - Bootstrap Image Gallery
 
 
+
+
+    https://github.com/user-attachments/assets/c2d066d3-77d6-4257-bbbb-aeaba29ab187
+
+
+
     
 ## 4일차
 
@@ -374,6 +380,9 @@
 9. Bootstrap Example의 테마 적용
 10. 전체화면
 
+
+
+    https://github.com/user-attachments/assets/62386ab9-3334-41f7-a57f-6e75a8fa0fa8
 
 
 
