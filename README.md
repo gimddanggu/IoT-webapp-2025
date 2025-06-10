@@ -1017,6 +1017,36 @@
 
 ### ASP.NET Core API서버(계속)
 
-#### WebAPI 서버 + 웹사이트 + 윈앱
+#### WebAPI 서버 + 웹사이트 + 윈앱(WPF)
+- 웹사이트나 WPF 윈앱에서는 DB 연동 없어도 데이터 처리가 가능
+- Todo List 오늘 할 일 api 서비스
+
+    |API|설명|Request body|Response body|
+    |:--|:--|:--|:--|
+    |GET ~/api/todoitems| 모든 할 일정보 가져오기 | None | 할 일 정보 배열 | 
+    |GET ~/api/todoitems| {id}| 특정 할 일 정보 가져오기| None | 할 일 정보 한 건|
+    |POST ~/api/todoitems| 새 할 일 추가 | todoItem 데이터|todoItem 데이터|
+    |PUT ~api/todoitems/{id}|기존 할 일 수정| todoItem | None|
+    |DELETE ~api/todoitems/{id}|기존 할 일 삭제|None|None|
+
+    1. 프로젝트 생성 
+    2. 패키지 설치
+    3. DB구성, 생성
+    4. 컨트롤러 생성 (내용 생략)
+
+- WPF 앱 API 사용 - 데이터포털로 부산맛집정보앱, 영화즐겨차직와 동일 (GET메서드만 사용)
+    1. WPF 프로젝트  생성
+    2. NuGet 패키지 관리에서 패키지 설치
+        - MahApps.Metro / IconPacks
+        - Microsoft.AspNet.WebApi.client
+    3. UI 설정
+    4. 모델설정, 컬렉션 설정
+    5. WebAPI 호출로 CRUD 구현
+
+        <img src="./image/web0031.png" width="600">
+
+## 13일차
+### ASP.NET Core API서버(계속)
+#### WebAPI 서버 + 웹사이트
 
 ### AWS 클라우드 업로드
