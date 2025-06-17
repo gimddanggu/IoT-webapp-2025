@@ -24,14 +24,14 @@ DROP TABLE IF EXISTS `Board`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Board` (
   `Id` int NOT NULL AUTO_INCREMENT,
-  `Email` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Writer` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
-  `Title` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Contents` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `PostDate` datetime(6) DEFAULT NULL,
+  `Email` varchar(125) NOT NULL,
+  `Writer` varchar(50) DEFAULT NULL,
+  `Title` varchar(250) NOT NULL,
+  `Contents` longtext NOT NULL,
+  `PostDate` datetime DEFAULT NULL,
   `ReadCount` int DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,6 +40,7 @@ CREATE TABLE `Board` (
 
 LOCK TABLES `Board` WRITE;
 /*!40000 ALTER TABLE `Board` DISABLE KEYS */;
+INSERT INTO `Board` VALUES (1,'personar@nate.com','작성자','게시판입니다. 첫번째 글입니다','내용은 없습니다','2025-06-05 16:10:10',0);
 /*!40000 ALTER TABLE `Board` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-06-12 16:30:39
+-- Dump completed on 2025-06-12 16:05:38
